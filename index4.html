@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador - Día a Día</title>
+    <link rel="stylesheet" href="STYLES3.CSS">
+</head>
+<body>
+    <div class="container">
+        <h1>OPERADOR</h1>
+        <img src="image.png" alt="Logo Día Día" class="logo">
+        <p class="fecha">29/03/2025</p>
+
+        <input type="text" placeholder="CARLOS ARMANDO ALVARADO" class="input">
+
+        <input type="text" placeholder="CEDULA N°: 741894E" class="input" id="cedula" oninput="validarCedula(this)">
+
+        <div id="mensaje" class="alerta">
+            En la casilla cedula solo se admiten<br><span>números</span><br>
+            <a href="#" onclick="ocultarMensaje()">ok</a>
+        </div>
+
+        <button class="boton">VERIFICAR</button>
+    </div>
+
+    <script>
+        function validarCedula(input) {
+            const mensaje = document.getElementById('mensaje');
+            if (/\D/.test(input.value)) {
+                mensaje.style.display = 'block';
+            }
+        }
+
+        function ocultarMensaje() {
+            document.getElementById('mensaje').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

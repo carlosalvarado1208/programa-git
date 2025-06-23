@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración del idioma y caracteres -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>DIA DIA</title>
+    
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Contenedor principal del contenido -->
+    <div class="container">
+        
+        <!-- Título principal de la página -->
+        <h1>DIA DIA</h1>
+
+        <!-- Imagen del logo con clase para aplicar estilos -->
+        <img src="logodiadia.png" alt="Logo DIA DIA Montacarga" class="logo">
+
+        <!-- Espacio donde se mostrará la fecha -->
+        <div id="fecha"></div>
+
+        <!-- Grupo de botones -->
+        <div class="botones">
+
+            <!-- Cada botón abre una nueva pestaña -->
+            <a href="admin.html" target="_blank"><button class="boton">ADMINISTRADOR</button></a>
+            <a href="operador.html" target="_blank"><button class="boton">OPERADOR</button></a>
+            <a href="mantenimiento.html" target="_blank"><button class="boton">MANTENIMIENTO</button></a>
+            <a href="seguridad.html" target="_blank"><button class="boton">SEGURIDAD</button></a>
+        </div>
+    </div>
+
+    <!-- Script para mostrar la fecha actual automáticamente -->
+    <script>
+        const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const fecha = new Date().toLocaleDateString('es-ES', opciones);
+        document.getElementById("fecha").textContent = fecha;
+    </script>
+
+</body>
+</html>

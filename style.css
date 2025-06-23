@@ -1,0 +1,97 @@
+/* Estilos generales del cuerpo (body) */
+
+body {
+
+    margin: 0; /* Elimina márgenes por defecto */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+    background-color: #007ba7; /* Fondo azul */
+    color: white; /* Texto blanco */
+    display: flex; /* Usa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding: 20px; /* Espaciado interior */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+/* Contenedor principal */
+
+.container {
+    max-width: 400px; /* Máximo ancho */
+    width: 100%; /* Se adapta al tamaño del dispositivo */
+    text-align: center; /* Centra el texto */
+}
+
+/* Título principal */
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Imagen del logo */
+
+.logo {
+    width: 100px; /* Tamaño de la imagen */
+    margin-bottom: 20px;
+}
+
+/* Estilo para la fecha */
+
+#fecha {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de los botones */
+
+.botones {
+    display: flex;
+    flex-direction: column; /* Los botones uno debajo del otro */
+    gap: 15px; /* Espacio entre botones */
+}
+
+/* Estilos comunes de los botones */
+
+.boton {
+    background-color: white; /* Fondo blanco */
+    color: #007ba7; /* Texto azul */
+    border: none; /* Sin borde */
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar encima */
+    transition: background 0.3s, color 0.3s; /* Suaviza el cambio al pasar el mouse */
+    width: 100%; /* Que ocupe todo el ancho disponible */
+}
+
+/* Estilo al pasar el mouse por el botón */
+
+.boton:hover {
+    background-color: #005f85; /* Azul más oscuro */
+    color: white; /* Texto blanco */
+}
+
+/* Ajustes para pantallas grandes (más de 600px) */
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 500px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .boton {
+        font-size: 1.1em;
+    }
+
+    #fecha {
+        font-size: 1.2em;
+    }
+}
